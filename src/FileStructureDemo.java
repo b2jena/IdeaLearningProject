@@ -1,4 +1,3 @@
-
 public class FileStructureDemo {
     public void helloWorld() {
         System.out.println("Hello world!");

@@ -1,9 +1,9 @@
 package warehouse;
 
+import util.Utils;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import util.Utils;
 
 public final class Warehouse {
     // Fruit name to amount of it in warehouse
@@ -16,15 +16,14 @@ public final class Warehouse {
         }
     }
 
-  /**
-   * @param fruitName some fruit name from Utils.FRUITS (mango, apple...)
-   */
+    /**
+     * @param fruitName some fruit name from Utils.FRUITS (mango, apple...)
+     */
     public void addFruits(String fruitName, int quantity) {
         Integer curQuantity = entry.get(fruitName);
         if (curQuantity != null) {
             entry.put(fruitName, curQuantity + quantity);
-        }
-        else {
+        } else {
             throw new IllegalArgumentException("Not found fruit with name: " + fruitName);
         }
     }
@@ -33,8 +32,7 @@ public final class Warehouse {
         Integer curQuantity = entry.get(fruitName);
         if (curQuantity == null) {
             throw new IllegalArgumentException("Not found fruit with name: " + fruitName);
-        }
-        else if (curQuantity > 0) {
+        } else if (curQuantity > 0) {
             entry.put(fruitName, curQuantity - 1);
             return true;
         }

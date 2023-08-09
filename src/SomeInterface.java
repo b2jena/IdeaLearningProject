@@ -1,4 +1,3 @@
-
 interface SomeInterface {
     void foo(FileStructureDemo demo);
 }

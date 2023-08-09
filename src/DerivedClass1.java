@@ -1,4 +1,3 @@
-
 public class DerivedClass1 implements SomeInterface {
     @Override
     public void foo(FileStructureDemo demo) {
